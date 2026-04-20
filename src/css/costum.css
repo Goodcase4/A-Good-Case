@@ -1,0 +1,49 @@
+/* COLORS */
+:root {
+  --primary-bg-color: #e9e9e7;
+  --secondary-bg-color: #dad5cd;
+  --primary-text-color: #000000;
+  --seconday-text-color: #ffffff;
+  --tertiary-text-color: #444444;
+  --primary-accent-color: #a1c233;
+  --secondary-accent-color: #322119;
+  --cta-brown-hover-color: #523b31;
+  --cta-green-hover-color: #bbd174;
+}
+html {
+  /* FONT TYPE */
+  --poppins: "Poppins", sans-serif;
+  /* FONT WEIGHT */
+  --headline-font-weight: 700;
+  --body-font-weight: 400;
+  /* FONT SIZES */
+
+  --h1-desk: clamp(64px, 2.5vw, 76px);
+  --h2-desk: clamp(48px, 2.2vw, 64px);
+  --h3-desk: clamp(28px, 1.8vw, 36px);
+  --h4-desk: clamp(20px, 1.5vw, 32px);
+  --h5-desk: clamp(16px, 1.2vw, 20px);
+
+  --h1-mobile: clamp(28px, 6vw, 36px);
+  --h2-mobile: clamp(20px, 5vw, 32px);
+  --h3-mobile: clamp(18px, 4.5vw, 24px);
+  --h4-mobile: clamp(16px, 4vw, 20px);
+  --h5-mobile: clamp(14px, 3.5vw, 16px);
+
+  --body-xs-desk: 13px;
+  --body-s-desk: 14px;
+  --body-m-desk: 16px;
+  --body-l-desk: 20px;
+
+  --body-xxxs-mobile: 11px;
+  --body-xxs-mobile: 12px;
+  --body-xs-mobile: 13px;
+  --body-s-mobile: 14px;
+  --body-m-mobile: 15px;
+  --body-l-mobile: 16px;
+  --body-xl-mobile: 20px;
+  --body-xxl-mobile: 24px;
+
+  --btn-text-desk: 16px;
+  --btn-text-mobile: 12px;
+}
