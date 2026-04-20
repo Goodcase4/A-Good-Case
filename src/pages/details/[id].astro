@@ -1,0 +1,30 @@
+---
+//@ts-nocheck
+export async function getStaticPaths() {
+    const endpoint = "https://iaduahadfyssoyyvutnz.supabase.co/rest/v1/Produkter?"
+
+const options={
+    headers:{
+        apikey: "sb_publishable_Xqf0QS3qNkh-fM6NTJ0VdA_00QLo3XC"
+    }
+}
+  const response = await fetch(endpoint, options);
+  const data = await response.json();
+
+  return data.map((product) => {
+    return {
+      params: { id: product.id.toString() },
+      props: { product },
+    };
+  });
+}
+
+const { product } = Astro.props;
+---
+<h1>{product.productname}</h1>
+   <img src={product.beerimg} alt="productimage">
+    <h3>{product.name}</h3>
+    <p>{product.price} DKK</p>
+    <p>{product.brand}</p>
+    <p>{product.vol}</p>
+    <p>{product.bprice}</p>

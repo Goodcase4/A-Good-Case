@@ -1,8 +1,32 @@
 ---
+//@ts-nocheck
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+const endpoint = "https://iaduahadfyssoyyvutnz.supabase.co/rest/v1/Produkter?"
 
+const options={
+    headers:{
+        apikey: "sb_publishable_Xqf0QS3qNkh-fM6NTJ0VdA_00QLo3XC"
+    }
+}
 
-
+const data = await fetch(endpoint, options).then((response) => response.json());
 
 ---
+
+<Layout>
+    <section>
+        {data.map((product) => <Card {product} />)}
+    </section>
+</Layout>
+
+<style>
+    section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 5rem;
+    }
+</style>
 
 

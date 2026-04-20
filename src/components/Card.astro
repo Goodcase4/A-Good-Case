@@ -1,0 +1,30 @@
+---
+const { product } = Astro.props;
+---
+<a href=`details/${product.id}`>
+<article>
+    <img src={product.beerimg} alt="productimage">
+    <img src={product.glassimg} alt="glassimage">
+    <h3>{product.productname}</h3>
+    <p>{product.price} DKK</p>
+    <p>{product.brand}</p>
+    <p>{product.vol}</p>
+    <p>{product.bprice}</p>
+</article>
+</a>
+
+<style>
+    article {
+        border: solid 1px;
+        padding: 1rem;
+    }
+    img {
+        max-width: 100%;
+    }
+
+   p {
+font-family: "Poppins", sans-serif;
+font-weight: 600;
+    }
+</style>
+
