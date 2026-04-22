@@ -1,0 +1,32 @@
+---
+import "../css/costum.css"
+---
+
+<button>TILMELD NYHEDSBREV
+</button>
+
+<style>
+    button{
+        color:var(--primary-text-color);
+        background-color: var(--primary-accent-color);
+        font-family: var(--poppins);
+        font-size: 12px;
+        font-weight: var(--semibold);
+        padding: 15px;  
+        cursor: pointer;
+        border: none;
+
+    }
+    button:hover{
+        background-color: var(--secondary-accent-color);
+
+    }
+    button:active{
+        background-color: var(--tertiary-text-color);
+    }
+    @media (min-width: 801px){
+        button{
+ font-size: 16px;
+        }
+    }
+</style>
