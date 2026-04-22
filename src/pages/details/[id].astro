@@ -1,5 +1,7 @@
 ---
 //@ts-nocheck
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
 export async function getStaticPaths() {
     const endpoint = "https://iaduahadfyssoyyvutnz.supabase.co/rest/v1/Produkter?"
 
@@ -19,12 +21,11 @@ const options={
   });
 }
 
+const { id } = Astro.params
 const { product } = Astro.props;
 ---
-<h1>{product.productname}</h1>
-   <img src={product.beerimg} alt="productimage">
-    <h3>{product.name}</h3>
-    <p>{product.price} DKK</p>
-    <p>{product.brand}</p>
-    <p>{product.vol}</p>
-    <p>{product.bprice}</p>
+
+<Layout>
+  <Card product={product}/>
+</Layout>
+   
