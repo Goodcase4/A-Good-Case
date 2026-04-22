@@ -1,0 +1,100 @@
+---
+import "../css/costum.css"
+import Btn_tilmeld from "../components/Btn_tilmeld.astro"
+---
+
+<footer>
+<section>
+  <div>
+    <h3>ÅBNINGSTIDER</h3>
+    <p class="footer_section1_p">Onsdag - Fredag:<br>10:00 - 17:00</p>
+ </div>
+   <div>
+    <h3>ADRESSE</h3>
+    <p class="footer_section1_p">Vallensbækvej 55<br>2605 Brøndby<br>Danmark<br>+45 30 45 99 90 </p>
+ </div>
+  <div>
+    <h3>KONTAKT</h3>
+    <p class="footer_section1_p">info@agoodcase.dk<br>+45 30 45 99 90<br>Telefontid: 09:00 - 12:00<br>(alle hverdage)</p>
+ </div>
+</section>
+<section>
+    <a href="/about"><h3 class="underpagelink" >OM OS</h3> </a>
+    <h3 class="underpagelink">HANDELSBETINGELSER</h3>
+    <h3 class="underpagelink">PERSONDATAPOLITIK</h3>
+    <h3 class="underpagelink">LEVERING OG PRISGARANTI</h3>
+    <h3 class="underpagelink">PARTNERSKABER</h3>
+    <h3 class="underpagelink">KONTROLRAPPORT</h3>
+    <h3 class="underpagelink">COOKIEPOLITIK</h3>
+    <h3 class="underpagelink">SPØRGSMÅL OG SVAR</h3>
+</section>
+<section>
+    <div>
+    <h3>NYHEDSBREV</h3>
+    <p>Få en masse spændende tilbud i din indbakke!</p></div>
+    <div>
+        <h3>E-MAIL:</h3>
+        <input type="text" placeholder="Skriv e-mail her" /><br>
+        <Btn_tilmeld>
+    </div>
+</section>
+</footer>
+
+<style>
+
+ footer{background-color: var(--primary-text-color); padding-left: var(--padding-mobile);
+  padding-right: var(--padding-mobile);
+  padding-top: 77px;
+  padding-bottom: 78px;
+}
+footer section{ margin-bottom: 70px;}
+ h3,p{
+    color: var(--secondary-text-color);
+    font-family: var(--poppins);
+ }
+ h3{
+    font-weight: var(--bold);
+ }
+ p{
+    font-weight: var(--regular);
+ }
+ .footer_section1_p{
+    margin-bottom: 35px;
+ }
+input{
+    font-family: var(--poppins); 
+    font-size: var(--h4-mobile); 
+    font-weight: var(--regular);
+    color: var(--input-text);  
+    background-color: var(--secondary-text-color);
+    padding: 18px;
+    width:248px;
+    border: 2.5px solid var(--input-border);
+    margin-bottom: 20px;
+
+}
+
+.underpagelink{text-decoration: underline;margin-bottom: 31px;}
+
+     /* TABLET CSS */
+     @media (min-width:768px){
+        footer{display: grid; grid-template-columns:1fr 1fr ;}
+     }
+ /* DESKTOP CSS */
+    @media (min-width: 1024px){
+  footer{display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: var(--padding-desk);
+    padding-right: var(--padding-desk);
+    padding-top: 87px;
+    padding-bottom: 111px;} 
+    input{
+        width:289px;
+        margin-bottom: 17px;
+    }
+    footer section{ margin-bottom: none;}
+ }
+ 
+    
+ 
+</style>
