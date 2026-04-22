@@ -3,14 +3,83 @@ const {img, text, overskrift} = Astro.props;
 ---
 
 <article>
+
+    <section class="text">
 <h2>{overskrift}</h2>
 <p>{text}</p>
-<img>{img}</img>
+</section>
+<img src={img} alt="Billede">
+
 
 </article>
 
 
+<!-- CSS STYLING -->
+
+
+<style>
+article 
+    {
+        border: solid 1px;
+        margin: 30px;
+        padding: 20px;
+
+        display: grid;
+        align-items: center;
+        gap: 10px; 
+    }
+
+img {
+        max-width: 100%;
+        height: auto;
+    }
+
+p   {
+        font-family: var(--poppins);
+        font-weight: var(--body-s-mobile);
+    }
+
+    
+h1 {
+        margin: 30px;
+        font-weight: var(--h2-mobile);
+    }
+
+
+h2  {
+        font-weight: var(--h2-mobile); 
+    }
+     
+
+
+@media (min-width: 560px) {
+
+    article
+
+   {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   
+}
+ 
+.text {
+
+   align-items: 
+   padding: 20px;
+}
+
+.img {
+    max-width: 70%;
+}
+
+.h1 {
+    font-weight: var(--h1-desk);
+}
+
+}
 
 
 
-/* CSS STYLING */
+</style>
+
