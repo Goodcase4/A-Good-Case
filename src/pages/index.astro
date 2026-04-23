@@ -35,6 +35,13 @@ const data = await fetch(endpoint, options).then((response) => response.json());
         padding: var(--padding-mobile);
     }
 
+      @media (min-width: 768px) {
+        section {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+        }
+    }
+
     @media (min-width: 1024px) {
        section {
         display: grid;
