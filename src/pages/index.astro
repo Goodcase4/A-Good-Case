@@ -2,6 +2,11 @@
 //@ts-nocheck
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Hero from "../components/Hero.astro";
+import Miljo_banner from '../components/Miljo_banner.astro';
+import Nyhedsbrev from '../components/Nyhedsbrev.astro';
+
+
 const endpoint = "https://iaduahadfyssoyyvutnz.supabase.co/rest/v1/Produkter?"
 
 const options={
@@ -15,16 +20,28 @@ const data = await fetch(endpoint, options).then((response) => response.json());
 ---
 
 <Layout>
+    <Hero/>
     <section>
         {data.map((product) => <Card {product} />)}
     </section>
+    <Miljo_banner/>
+	<Nyhedsbrev/>
 </Layout>
 
 <style>
     section {
         display: grid;
-        gap: 1rem;
-        padding: 2rem;
+        gap: 20px;
+        padding: var(--padding-mobile);
+    }
+
+    @media (min-width: 1024px) {
+       section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+        padding: var(--padding-desk);
+    }
     }
 </style>
 
