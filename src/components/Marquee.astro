@@ -1,5 +1,71 @@
+---
+import "../css/custom.css";
+---
 
-<marquee direction="right">På grund af ny lov skal MitID bruges ved online køb af alkohol   |   Fri fragt over 499,- (eks. pant)   |   Prisgaranti   |   4.8 Trustpilot   |</marquee>
+<section class="rollingbanner">
+        <div class="marquee_text">
+          <div class="marquee-text-track">
+            <p>get 15% off when rebooking</p>
+            <p aria-hidden="true">På grund af ny lov skal MitID bruges ved online køb af alkohol   |   Fri fragt over 499,- (eks. pant)   |   Prisgaranti   |   4.8 Trustpilot   |   </p>
+           <p aria-hidden="true">På grund af ny lov skal MitID bruges ved online køb af alkohol   |   Fri fragt over 499,- (eks. pant)   |   Prisgaranti   |   4.8 Trustpilot   |   </p>
+            <p aria-hidden="true">På grund af ny lov skal MitID bruges ved online køb af alkohol   |   Fri fragt over 499,- (eks. pant)   |   Prisgaranti   |   4.8 Trustpilot   |   </p>
+            <p aria-hidden="true">På grund af ny lov skal MitID bruges ved online køb af alkohol   |   Fri fragt over 499,- (eks. pant)   |   Prisgaranti   |   4.8 Trustpilot   |   </p>
+          <p aria-hidden="true">På grund af ny lov skal MitID bruges ved online køb af alkohol   |   Fri fragt over 499,- (eks. pant)   |   Prisgaranti   |   4.8 Trustpilot   |   </p>
+            <p aria-hidden="true">På grund af ny lov skal MitID bruges ved online køb af alkohol   |   Fri fragt over 499,- (eks. pant)   |   Prisgaranti   |   4.8 Trustpilot   |   </p>
+            
+          </div>
+        </div>
+      </section>
+      <style>
+        .rollingbanner {
+  background: var(--primary-text-color);
+  color:var(--secondary-text-color);
+  font-family: var(--poppins);
+  font-size: 11px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.marquee_text {
+  overflow: clip;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 2.5rem,
+    black calc(100% - 2.5rem),
+    transparent
+  );
+}
+
+.marquee-text-track {
+  display: flex;
+  padding-left: 4rem;
+  gap: 4rem;
+  width: max-content;
+  animation: marquee-move-text 18s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-text-track {
+    animation: none;
+  }
+}
+
+@keyframes marquee-move-text {
+  to {
+    transform: translateX(-50%);
+  }
+}
+   /* TABLET CSS */
+     @media (min-width:768px){ 
+        .rollingbanner{font-size: 11.5px;}
+    }
+     /* DESKTOP CSS */
+    @media (min-width: 1024px){ 
+        .rollingbanner{
+        font-size: 12px;
+    }}
+      </style>
+<!-- <marquee direction="left">På grund af ny lov skal MitID bruges ved online køb af alkohol   |   Fri fragt over 499,- (eks. pant)   |   Prisgaranti   |   4.8 Trustpilot   |</marquee>
 
 <style>
     marquee{
@@ -17,4 +83,4 @@
     @media (min-width: 1024px){marquee{
         font-size: 12px;
     }}
-</style>
+</style> -->
