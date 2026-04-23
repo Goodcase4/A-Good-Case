@@ -1,14 +1,13 @@
+
 ---
 const {img, text, overskrift} = Astro.props;
 ---
-
 <article>
-
+    <img src={img} alt="Billede">
     <section class="text">
 <h2>{overskrift}</h2>
 <p>{text}</p>
 </section>
-<img src={img} alt="Billede">
 
 
 </article>
@@ -18,31 +17,24 @@ const {img, text, overskrift} = Astro.props;
 
 
 <style>
+
+    /* MOBILE FIRST */
 article 
     {
-        border: solid 1px;
-        margin: 30px;
-        padding: 20px;
-
-        display: grid;
+        display: flex;
+        flex-direction: column;
         align-items: center;
         gap: 10px; 
+        margin: 30px;
+        padding: 20px;
     }
-
 img {
         max-width: 100%;
         height: auto;
     }
-
 p   {
         font-family: var(--poppins);
         font-weight: var(--body-s-mobile);
-    }
-
-    
-h1 {
-        margin: 30px;
-        font-weight: var(--h2-mobile);
     }
 
 
@@ -51,35 +43,32 @@ h2  {
     }
      
 
+/* DESKTOP */
 
-@media (min-width: 560px) {
-
-    article
-
-   {
-   display: flex;
+@media (min-width: 1024px) {
+    article {
    flex-direction: row;
-   justify-content: space-between;
+   align-items: stretch;
    
+   padding: 60px 0 60px 0;
+   max-width: 1400px;
+   margin: 0 auto;
+   background-color: var(--primary-bg-color:);
 }
- 
+
+img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    
+}
 .text {
-
-   align-items: 
-   padding: 20px;
+    max-width: 50%;
+    padding: 40px 60px;
+    max-width: none;
 }
-
-.img {
-    max-width: 70%;
 }
-
-.h1 {
-    font-weight: var(--h1-desk);
-}
-
-}
-
 
 
 </style>
-
