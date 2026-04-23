@@ -1,0 +1,114 @@
+---
+
+---
+
+<section class="resp-banner">
+
+    <div class="banner-item">
+        <img src="/src/assets/icons/heart_icon.svg" alt="Hjerte ikon">
+        <h5>SOCIALT ANSVAR</h5>
+        <p class="banner-description">Vi ansætter unge med udfordringer og skaber værdi for alle parter.</p>
+    </div>
+
+    <div class="banner-item">
+        <img src="/src/assets/icons/earth_icon.svg" alt="Jordklode ikon">
+        <h5>BÆREDYGTIGHED</h5>
+        <p class="/banner-description">Vi opkøber premium-øl og mindsker spild fra ølproduktion.</p>
+    </div>
+
+    <div class="banner-item">
+        <img src="/src/assets/icons/lightbulb_icon.svg" alt="Lyspære ikon">
+        <h5>DANSK IVÆRKSÆTTERI</h5>
+        <p class="banner-description">Vi er en dansk virksomhed med fokus på miljøet.</p>
+    </div>
+
+
+
+
+</section>
+
+
+<style>
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+    h5, p {
+        font-family: 'Poppins', sans-serif;
+        color: white;
+    }
+
+    h5{
+        font-size: 15pt;
+    }
+
+    p {
+        font-size: 13pt;
+    }
+
+    
+
+    .resp-banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+        padding: 5rem;
+        
+        background-color: #322119;
+    }
+
+    .banner-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        align-items: center;
+        text-align: center;
+
+        
+            img{
+                width: 50px;
+                height: 50px;
+                margin-bottom: 1rem;
+            }
+        
+    }
+
+    .banner-description {
+        max-width: 100%;
+    }
+
+
+    @media (min-width: 1024px) {
+        .resp-banner {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            
+        }
+
+        .banner-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 2rem;
+
+        }
+
+        .banner-description {
+            max-width: 100%;
+        }
+    }
+
+
+</style>
+
