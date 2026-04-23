@@ -1,0 +1,319 @@
+---
+const { product } = Astro.props;
+import "../css/costum.css"
+import "../css/general.css"
+---
+
+
+<article class="detail_mobil">
+
+    <div class="product_brand">
+    <p>{product.breadcrumb}</p>
+    <h1>{product.productname}</h1>
+    <h3>{product.brand}</h3>
+   </div>
+
+<section class="desktop_grid">
+
+<div class="img_beer">
+    <img src={product.beerimg} alt="productimage" class="beer">
+    <img src={product.glassimg} alt="glassimage" class="glass">
+</div>
+
+
+<section class="text_box">
+
+     <div class="desktop_name_brand">
+    <p>{product.breadcrumb}</p>
+    <h1>{product.productname}</h1>
+    <h3>{product.brand}</h3>
+   </div>
+
+
+<div class="desktop_lined_info">
+    <div class="space_between"><p>BEDST FØR </p><p class="lined_bold">{product.bbf}</p></div>
+    <div class="space_between"><p>STØRRELSE </p><p class="lined_bold"> {product.size}</p></div>
+    <div class="space_between"><p>PROFIL </p><p class="lined_bold"> {product.flavor}</p></div>
+    <div class="space_between"><p>TYPE </p><p class="lined_bold">{product.type}</p></div>
+    <div class="space_between"><p>ALKOHOLPROCENT</p><p class="lined_bold"> {product.vol}</p></div>
+</div>
+
+
+    <div class="price_class">
+    <p>{product.bprice} DKK</p>
+    <h2>{product.price} DKK</h2>
+    </div>
+
+    <div class="save_boks_1">
+        <div class="save_pieces">
+    <p class="banner_price">SPAR {product.bprice} DKK</p>
+    <p>{product.stock} stk</p>
+       </div>
+    <p class="before_price">{product.bprice} DKK (vejl. markedspris) </p>
+    <p class="price_weight">{product.price} DKK/stk.</p>
+    </div>
+
+    <div class="save_boks_6">
+        <div class="save_pieces">
+    <p class="banner_price">SPAR {product.bprice} DKK</p>
+    <p>{product.stock} stk</p>
+       </div>
+    <p class="before_price">{product.bprice} DKK (vejl. markedspris) </p>
+    <p class="price_weight">{product.price} DKK/stk.</p>
+    </div>
+
+
+    <div class="btn_basket">
+    <button>Læg i kurv</button>
+    </div>
+
+    </section>
+
+    <div class="mobile_lined_info">
+    <div class="space_between"><p>BEDST FØR </p><p class="lined_bold">{product.bbf}</p></div>
+    <div class="space_between"><p>STØRRELSE </p><p class="lined_bold"> {product.size}</p></div>
+    <div class="space_between"><p>PROFIL </p><p class="lined_bold"> {product.flavor}</p></div>
+    <div class="space_between"><p>TYPE </p><p class="lined_bold">{product.type}</p></div>
+    <div class="space_between"><p>ALKOHOLPROCENT</p><p class="lined_bold"> {product.vol}</p>
+    </div>
+
+</section>
+
+
+    <!-- <div class="description">
+    <p>{product.description}</p>
+    </div>  -->
+
+</article>
+
+
+
+
+<!-- CSS STYLING -->
+
+
+
+
+<style>
+
+/* MOBILE FIRST */
+
+*p,
+h1,
+h2,
+h3 {
+    padding: 5px 0 5px 0;
+    font-family: var(--poppins);
+}
+
+body {
+  background-color: var(--primary-bg-color);
+}
+
+
+
+.desktop_name_brand {
+    display: none;
+}
+
+.desktop_lined_info {
+    display: none;
+}
+
+
+
+     article {
+     max-width: 333px;
+     margin: 0 auto; 
+     padding: var(--padding-mobile);
+
+
+    }
+
+/* BILLEDER - KODE FRA CARO */
+
+    .img_beer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+        background-color: #E0DBD1;
+    }
+
+    .beer {
+    max-height: 240px;
+    z-index: 1;
+    margin-left: -30px;
+    position: relative;
+    }
+ 
+    .glass {
+       max-height: 140px;
+       margin-left: -90px;
+       z-index: 2;
+       position: relative;
+    }
+
+
+    /* Boxes with 1 or 6 */
+
+.save_boks_1, 
+.save_boks_6 {
+    border: solid 10px var(--secondary-accent-color);
+    padding: 10px;   
+    margin: 20px 0 20px 0;
+    max-width: 280px;       
+}
+
+.save_pieces {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 200px;
+
+    font-size: var(--body-xxs-mobile)
+}
+
+p.banner_price {
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-accent-color);
+    padding: 5px 10px 5px 1px;
+}
+
+p.before_price {
+    text-decoration: line-through;
+    
+}
+
+p.price_weight {
+    font-weight: var(--bold);
+   
+}
+
+
+/* UNDER BOXES */
+
+
+button {
+        padding: 15px 20px 15px 20px;
+        margin: 20px 0 20px 0;
+
+        background-color: var(--primary-accent-color);
+        font-weight: var(--bold);
+
+}
+
+.space_between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.lined_bold {
+    font-weight: var(--bold);
+}
+     
+/* .description {
+        border: solid 10px var(--secondary-accent-color);
+        padding: var(--padding-mobile);
+        margin-top: 30px;
+} */
+
+
+/* DESKTOP */
+
+
+@media (min-width: 1024px) {
+
+  article {
+    max-width: 1100px;
+    margin: 0 auto;
+
+  }
+
+.mobile_lined_info,
+.product_brand {
+    display: none;
+}
+
+.desktop_lined_info,
+.desktop_name_brand {
+    display: block;
+    padding-top: 50px;
+
+
+}
+
+
+/* BILLEDER I DESKTOP */
+
+
+  .img_beer {
+    justify-content: flex-start;
+    margin: 0;
+/*     padding: 0 50px 0 50px; */
+/*     background-color: #E0DBD1; */
+    
+  }
+
+  .text_box {
+    padding-left: 30px;
+  }
+
+  .beer {
+    max-height: 550px;
+    margin-left: -100px;
+    margin-bottom: 200px;
+  }
+
+  .glass {
+    max-height: 400px;
+    margin-left: -220px;
+    margin-bottom: 200px;
+  }
+
+  /* Højre kolonne: alt tekst */
+
+  .detail_mobil {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .save_boks_1,
+  .save_boks_6,
+  .description {
+    max-width: 100%;
+  }
+
+  .space_between {
+    max-width: 420px;
+  }
+
+
+.save_boks_1, 
+.save_boks_6 {
+    border: solid 10px var(--secondary-accent-color);
+    max-width: 350px;       
+}
+
+.space_between {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.desktop_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+}
+
+</style>
+
+
+
+   
