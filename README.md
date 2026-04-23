@@ -16,27 +16,33 @@ Dernæst skulle prototypen pitches for kunden 'A Good Case' og til sidst kodes v
 Projektet er opdelt i HTML, CSS og JavaScript-filer.
 
 ```
-project/
-├── index.html
-├── companions.html
-│   └── profile.html
-├── about.html
-├── book.html
-├── pricing.html
-
+pages/
+├── index.astro
+├── productlist.astro
+│   └── productdetails.astro
+├── about.astro
+├──details
+   └── [id].astro
 
 ├── css/
-│   └── about.css
-│   └── companions.css
 │   └── custom.css
 │   └── general.css
-│   └── index.css
-│   └── pricing.css
-│   └── profile.css
-├── js/
-│   ├── index.js
-│   ├── about.js
-│   ├── profile.js
-│   └── book.js
+│
+├── components/
+│   ├── About_card_1.astro
+│   ├── About_card_2.astro
+│   ├── Btn_green_brown_grey.astro
+│   ├── Btn_tilmeld.astro
+│   ├── Card.astro
+    ├── Cart_btn.astro
+    ├── Carrousel.astro
+    ├── Header.astro
+    ├── Footer.astro
+    ├── Marquee.astro
+    ├── Miljo_banner.astro
+    ├── Nyhedsbrev.astro
+    ├── Pop_up_age.astro
+    ├── Smagekase.astro
+│   └── Sortering_filter_produktliste.astro
 └── README.md
 ```
