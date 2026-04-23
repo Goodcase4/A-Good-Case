@@ -2,6 +2,7 @@
 //@ts-nocheck
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
+import Accordiondescription from '../components/Accordion-description.astro';
 export async function getStaticPaths() {
     const endpoint = "https://iaduahadfyssoyyvutnz.supabase.co/rest/v1/Produkter?"
 
@@ -27,5 +28,6 @@ const { product } = Astro.props;
 
 <Layout>
   <Card product={product}/>
+  <Accordiondescription/>
 </Layout>
    
