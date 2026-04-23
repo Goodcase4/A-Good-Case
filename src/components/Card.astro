@@ -4,7 +4,9 @@ import "../css/costum.css"
 import "../css/general.css"
 ---
 <a href=`details/${product.id}`>
+   
 <article>
+     <span class="discount">SPAR {product.discount} DKK</span>
     <div class="position">
     <img src={product.beerimg} alt="productimage" class="beer">
     <img src={product.glassimg} alt="glassimage" class="glass">
@@ -14,48 +16,162 @@ import "../css/general.css"
     <p>{product.brand}</p>
     <p>{product.bbf}</p>
     </div>
-    <h3>{product.productname}</h3>
-    <p>{product.size} {product.flavor} og {product.texture} {product.type} med en volumen på {product.vol}</p>
-    <p>{product.bprice} DKK</p>
-    <p>{product.price} DKK</p>
+    <h1>{product.productname}</h1>
+    <p class="description">{product.size} {product.flavor} og {product.texture} {product.type} med en volumen på {product.vol}.</p>
+    <div class="priceflex">
+    <p class="bprice"> {product.bprice}</p>
+    <p class="price">{product.price}</p>
+    </div>
          </div>
+         </a>
+         <div class="button-row">
+            <div class="selector">
+                <span>1 STK</span>
+                <span class="arrow-cart"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 16 15" fill="none">
+  <path d="M8.13143 8.09375L11.2841 5L12.1847 5.88438L8.13143 9.86188L4.07812 5.88438L4.97872 5.00063L8.13143 8.09375Z" fill="#1A1A1A"/>
+</svg></span>
+            </div>
+         <button class="cart-btn">
+    <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 1.5H7.08747V16.3837H23.3886L26.2236 5.04373H12.0487" stroke="black" stroke-width="3"/>
+<rect x="6.37891" y="21.3449" width="4.25248" height="4.25248" fill="black"/>
+<rect x="19.1367" y="21.3449" width="4.25248" height="4.25248" fill="black"/>
+</svg> 
+</button>
+</div>
 </article>
-</a>
 
 <style>
     article {
         border: solid 10px var(--secondary-accent-color);
-        font-family:var(--poppins);
         background-color: #E0DBD1;
         font-family: var(--poppins);
+    }
+
+    .discount {
+        display: inline-grid;
+        position: absolute;
+       font-family: var(--poppins);
+       font-size: var(--h5-mobile);
+       font-weight: var(--regular);
+       background-color: var(--secondary-accent-color);
+       padding: 5px 15px;
+       min-width: 105px;
+       margin-top: 1.5rem;
+       z-index: 2;
+       color: var(--secondary-text-color);
     }
 
     .top
     {
         display: flex;
-        align-items: flex-end;
-        gap: 62px;
+        justify-content: space-between;
+        font-size: var(--body-xxxs-mobile);
+        font-weight:var(--light);
+    }
+
+    .priceflex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bprice {
+        text-decoration: line-through;
+        font-size: var(--h5-mobile);
+    }
+
+    .price {
+        font-size: var(--h1-mobile);
+        font-weight: var(--semibold);
+    }
+
+    h1 {
+        font-size: var(--h1-mobile);
+        font-weight: var(--semibold);
+        margin-top: 0.5rem;
+        margin-bottom: 1.2rem;
+        line-height: 30px;
+    }
+
+    .description {
+        font-size: var(--h5-mobile);
+        font-weight: var(--light);
+        margin-bottom: 2rem;
     }
 
     a {
         color: inherit;
         text-decoration: none;
     }
-    .position img {
-        margin-top: 2rem;
+
+    .position {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
     }
 
-    .info {
-        background-color: #F4F4F2;
-        padding: 1rem;
-    }
 
     .beer {
-        max-height: 185px;
+     max-height: 185px;
+    z-index: 1;
+    margin-left: -30px;
+    position: relative;
     }
 
     .glass {
-        max-height: 128px;
+       max-height: 100px;
+       margin-left: -70px;
+    z-index: 2;
+    position: relative;
+    }
+        .info {
+        background-color: #F4F4F2;
+        padding: 1rem 1rem 0.5rem 1rem;
+    }
+
+    .button-row {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        background-color: #F4F4F2;
+        padding: 0rem 1rem 1.5rem 1rem;
+    }
+
+    .selector {
+        display: flex;
+        align-items: center;
+        font-size: var(--h5-mobile);
+        gap: 8px;
+        padding: 14px 20px;
+        border: 1.5px solid var(--input-border);
+        cursor: pointer;
+    }
+
+    .arrow-cart {
+       display: flex;
+       align-items: center;
+    }
+
+     .cart-btn {
+   flex: 1;
+  background-color: var(--primary-accent-color);
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+    }
+    .cart-btn:hover{
+        background-color: var(--secondary-accent-color);
+
+    }
+    .cart-btn:active{
+        background-color: var(--tertiary-text-color);
     }
 </style>
 
