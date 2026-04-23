@@ -1,28 +1,113 @@
 ---
-
-
+import "../css/costum.css"
+import Btn_nyhedsbrev from "./Btn_nyhedsbrev.astro"
 ---
 
 
 <section class="newsletter_container">
 
-    <img src="/src/assets/img/cement.webp" alt="tekstureret billede">
+    <img class="nl_image smallimg" src="/src/assets/img/cementsmall3.webp" alt="tekstureret billede">
+    <img class="nl_image largeimg" src="/src/assets/img/cement.webp" alt="tekstureret billede">
 
-    <div>
-
+    
+    <div class="nl_flex">
+        <h3>Skal du være den første til at få besked om vores nye øl?</h3>
+        <p class="newsletter_text">Tilmeld dig vores nyhedsbrev og få besked når vi får nye øl, har lagersalg eller andre fede tilbud til dig.</p>
+        <div class="flex_input"> <label class="label_nl" for="email">E-mail:</label> <input type="email" id="email" placeholder="Indtast din email" class="email_input" name="email" aria-labelledby="Skriv email her"> <Btn_nyhedsbrev/> </div>
+        </div>
     </div>
 
 </section>
 
-<div>
-    <h5>Skal du være den første til at få besked om vores nye øl?</h5>
-    <p>Tilmeld dig vores nyhedsbrev og få besked når vi får nye øl, har lagersalg eller andre fede tilbud til dig.</p>
-    
-</div>
 
 
 <style>
+
+
+
     img {
         width: 100%;
     }
+
+    h3, p {
+        font-family: var(--poppins);
+ color: var(--secondary-text-color);
+ max-width: 50ch;
+    }
+
+    h3 {
+        
+       
+        font-size: 20pt;
+    }
+
+    .nl_flex {
+
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        gap: 1rem;
+        padding: 5rem 30px;
+        position: relative
+        
+    }
+
+     .nl_image {
+        position: absolute;
+    }
+
+    input {
+        padding: 15px;
+        font-size: 12px;
+        font-family: var(--poppins);
+        border: none;
+        border: 2px solid var(--primary-text-color);
+        max-width: 300px;
+    }
+
+    .flex_input{
+        display: flex;
+flex-direction: column;
+gap: 0.5rem;
+
+Btn_nyhedsbrev{
+    padding-right: 5000px;
+}
+
+
+
+    }
+
+
+    .label_nl{
+         font-family: var(--poppins);
+        color: var(--secondary-text-color)
+       
+
+    }
+
+    .largeimg{
+        display: none;
+    }
+
+
+
+    @media (min-width: 1024px){
+        .smallimg {
+            display: none;
+        }
+
+        .largeimg {
+            display: block;
+        }
+
+        .nl_flex{
+            padding: 100px;
+        }
+    
+
+
+
+    }
+
 </style>
