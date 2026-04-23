@@ -1,8 +1,9 @@
 ---
-import "../css/costum.css"
+import "../css/custom.css"
+const {Btn_indhold_gbg} =Astro.props;
 ---
 
-<button>TILMELD NYHEDSBREV
+<button>{Btn_indhold_gbg}
 </button>
 
 <style>
@@ -19,10 +20,12 @@ import "../css/costum.css"
     }
     button:hover{
         background-color: var(--secondary-accent-color);
+        color: var(--secondary-text-color);
 
     }
     button:active{
         background-color: var(--tertiary-text-color);
+        color: var(--secondary-bg-color);
     }
     @media (min-width: 801px){
         button{
