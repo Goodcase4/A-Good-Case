@@ -3,10 +3,10 @@ const { product } = Astro.props;
 import "../css/costum.css"
 import "../css/general.css"
 ---
-<a href=`details/${product.id}`>
    
 <article>
      <span class="discount">SPAR {product.discount} DKK</span>
+     <a href=`details/${product.id}`>
     <div class="position">
     <img src={product.beerimg} alt="productimage" class="beer">
     <img src={product.glassimg} alt="glassimage" class="glass">
@@ -14,7 +14,7 @@ import "../css/general.css"
     <div class="info">
     <div class="top">
     <p>{product.brand}</p>
-    <p>{product.bbf}</p>
+    <p>BEDST FØR: {product.bbf}</p>
     </div>
     <h1>{product.productname}</h1>
     <p class="description">{product.size} {product.flavor} og {product.texture} {product.type} med en volumen på {product.vol}.</p>
@@ -33,9 +33,9 @@ import "../css/general.css"
             </div>
          <button class="cart-btn">
     <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 1.5H7.08747V16.3837H23.3886L26.2236 5.04373H12.0487" stroke="black" stroke-width="3"/>
-<rect x="6.37891" y="21.3449" width="4.25248" height="4.25248" fill="black"/>
-<rect x="19.1367" y="21.3449" width="4.25248" height="4.25248" fill="black"/>
+<path d="M0 1.5H7.08747V16.3837H23.3886L26.2236 5.04373H12.0487" stroke="currentColor" stroke-width="3"/>
+<rect x="6.37891" y="21.3449" width="4.25248" height="4.25248" fill="currentColor"/>
+<rect x="19.1367" y="21.3449" width="4.25248" height="4.25248" fill="currentColor"/>
 </svg> 
 </button>
 </div>
@@ -43,13 +43,14 @@ import "../css/general.css"
 
 <style>
     article {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 2;
         border: solid 10px var(--secondary-accent-color);
-        background-color: #E0DBD1;
         font-family: var(--poppins);
     }
 
     .discount {
-        display: inline-grid;
         position: absolute;
        font-family: var(--poppins);
        font-size: var(--h5-mobile);
@@ -74,6 +75,7 @@ import "../css/general.css"
         display: flex;
         justify-content: space-between;
         align-items: center;
+
     }
 
     .bprice {
@@ -97,7 +99,7 @@ import "../css/general.css"
     .description {
         font-size: var(--h5-mobile);
         font-weight: var(--light);
-        margin-bottom: 2rem;
+        margin-bottom: 0;
     }
 
     a {
@@ -110,12 +112,16 @@ import "../css/general.css"
     align-items: flex-end;
     justify-content: center;
     padding: 2rem 1rem;
-    margin-top: 2rem;
+    background-color: #E0DBD1;
+    }
+
+    .position:hover {
+       opacity: 90%;
     }
 
 
     .beer {
-     max-height: 185px;
+    max-height: 185px;
     z-index: 1;
     margin-left: -30px;
     position: relative;
@@ -124,19 +130,16 @@ import "../css/general.css"
     .glass {
        max-height: 100px;
        margin-left: -70px;
-    z-index: 2;
-    position: relative;
+       z-index: 2;
+       position: relative;
     }
         .info {
-        background-color: #F4F4F2;
         padding: 1rem 1rem 0.5rem 1rem;
     }
 
     .button-row {
         display: flex;
         gap: 10px;
-        width: 100%;
-        background-color: #F4F4F2;
         padding: 0rem 1rem 1.5rem 1rem;
     }
 
@@ -155,8 +158,12 @@ import "../css/general.css"
        align-items: center;
     }
 
-     .cart-btn {
-   flex: 1;
+    .arrow-cart:hover {
+        color: var(--secondary-text-color);
+    }
+
+  .cart-btn {
+  flex: 1;
   background-color: var(--primary-accent-color);
   border: none;
   font-size: 22px;
@@ -168,10 +175,18 @@ import "../css/general.css"
     }
     .cart-btn:hover{
         background-color: var(--secondary-accent-color);
+        color: var(--secondary-text-color);
 
     }
     .cart-btn:active{
         background-color: var(--tertiary-text-color);
+        color: var(--secondary-bg-color);
     }
+
+    @media (min-width: 1024px) {
+        h1 {
+            line-height: 35px;
+        }
+}
 </style>
 
