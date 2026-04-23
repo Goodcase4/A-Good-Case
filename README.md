@@ -46,3 +46,62 @@ pages/
 │   └── Sortering_filter_produktliste.astro
 └── README.md
 ```
+
+### Filbeskrivelser
+
+- **index.astro** – forsiden
+- **productlist.astro** – viser alle de forskellige produkter
+- **productdetails.astro** – viser detaljer om det produkt man har klikket på.
+- **about.astro** – fortæller om brandet/firmaet
+- **general.css** – styrer designet og har reset
+  **custom.css** – indeholder vores variabler
+
+---
+
+## Navngivning
+
+Vi har navngivet vores filer, variabler og funktioner så de så tydeligt som muligt er selvforklarende.
+
+## Data og JSON-struktur
+
+Vi henter data fra et API i JSON-format.
+
+## Git og branches
+
+Vi har brugt GitHub til at samarbejde om projektet.
+
+Vi har arbejdet med branches, så vi ikke sad og ændrede i det samme på samme tid.
+
+Vi navngav branches alt efter hvilke elementer/funktioner der blev lavet.
+
+### Workflow
+
+1. Lave en branch
+2. Kode en feature
+3. Committe ændringer
+4. Pushe til GitHub
+5. Merge til main når det virkede
+
+Det gjorde det nemmere at holde styr på, hvem der lavede hvad.
+
+## Bæredygtighed
+
+Vi har tænkt bæredygtighed ind i projektet ved at komprimere alle vores billeder til webp.
+
+## Udfordringer undervejs
+
+- Linke til pages
+-
+
+## Mulige forbedringer
+
+Hvis vi skulle arbejde videre med projektet, kunne vi forbedre det ved at tilføje:
+
+- generelt bare færdigkode sitet
+
+## Gruppemedlemmer
+
+- Caroline Amalie Schytte Hemmingsen
+- Julie Petersen Bosch
+- Katrine Therkildsen Madsen
+- Patricia Klindt Brokholm
