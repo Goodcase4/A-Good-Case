@@ -1,13 +1,15 @@
 ---
 //@ts-nocheck
+const {logocolor} = Astro.props;
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
 import Miljo_banner from '../components/Miljo_banner.astro';
 import Nyhedsbrev from '../components/Nyhedsbrev.astro';
+import Header from "../components/Header.astro";
 
 
-const endpoint = "https://iaduahadfyssoyyvutnz.supabase.co/rest/v1/Produkter?"
+const endpoint = "https://iaduahadfyssoyyvutnz.supabase.co/rest/v1/Produkter?&limit=3"
 
 const options={
     headers:{
@@ -20,7 +22,9 @@ const data = await fetch(endpoint, options).then((response) => response.json());
 ---
 
 <Layout>
-    <Hero/>
+    <Header
+		/>
+    <Hero />
     <section>
         {data.map((product) => <Card {product} />)}
     </section>

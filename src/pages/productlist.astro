@@ -1,0 +1,54 @@
+---
+//@ts-nocheck
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+
+
+const endpoint = "https://iaduahadfyssoyyvutnz.supabase.co/rest/v1/Produkter?"
+
+const options={
+    headers:{
+        apikey: "sb_publishable_Xqf0QS3qNkh-fM6NTJ0VdA_00QLo3XC"
+    }
+}
+
+const data = await fetch(endpoint, options).then((response) => response.json());
+
+---
+
+<Layout>
+   <Header logocolor="black" />
+    <section>
+        {data.map((product) => <Card {product} />)}
+    </section>
+</Layout>
+
+<style>
+    section {
+        display: grid;
+        gap: 20px;
+        padding: var(--padding-mobile);
+    }
+
+      .nav_menu {
+     display: none;
+     color: black;
+     }
+
+      @media (min-width: 768px) {
+        section {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+       section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+        padding: var(--padding-desk);
+    }
+    }
+</style>
