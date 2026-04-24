@@ -4,6 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
 import AccordionDescription from '../../components/Accordion-description.astro';
 import Productdetails from '../../components/Productdetails.astro';
+import Header from '../../components/Header.astro';
 
 export async function getStaticPaths() {
 const endpoint = "https://iaduahadfyssoyyvutnz.supabase.co/rest/v1/Produkter?"
@@ -30,8 +31,18 @@ const { product } = Astro.props;
 
 
 <Layout>
+    <Header 
+		logocolor=black
+		/>
   <Productdetails product={product}/>
    <AccordionDescription />
 
 </Layout>
+
+<style>
+    .nav_menu {
+     display: none;
+     color: black;
+     }
+</style>
    

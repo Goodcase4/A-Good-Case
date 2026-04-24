@@ -1,4 +1,3 @@
-
 ---
 const {img, text, overskrift} = Astro.props;
 ---
@@ -17,12 +16,9 @@ const {img, text, overskrift} = Astro.props;
 article 
     {
 display: flex;
-        margin: 30px;
-        padding: 20px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px; 
         background-color: var(--primary-bg-color);
     }
 p   {
@@ -30,26 +26,25 @@ p   {
         font-weight: var(--body-s-mobile);
     }
 h2  {
-        font-weight: var(--h2-mobile); 
+       font-weight: var(--bold); 
+        font-family: var(--poppins);
     }
      
    img {
     
         max-width: 100%;
-        height: auto;
         margin: 0 auto;
    }
    .text {
-    margin: 0 auto;
-   }
+    padding: var(--padding-mobile);
+    }
 
 /* DESKTOP */
 @media (min-width: 1024px) {
     article {
    flex-direction: row;
-   align-items: stretch;
+   align-items: center;
    padding: 0;
-   max-width: 1400px;
    margin: 0 auto;
    background-color: #DAD5CD;
 
@@ -68,9 +63,13 @@ img {
     
 }
 .text {
-    max-width: 50%;
-    padding: 40px 60px;
-    max-width: none;
+     max-width: 50%;
+    padding: 0px 120px;
+}
+
+h2 {
+font-size: 32px;
+margin-bottom: 15px;
 }
 
 

@@ -1,5 +1,5 @@
 ---
-const { pagetitle,logocolor} = Astro.props;
+const { pagetitle} = Astro.props;
 import "../css/custom.css";
 import "../css/general.css";
 import Header from '../components/Header.astro';
@@ -28,9 +28,6 @@ import Marquee from "../components/Marquee.astro";
 	</head>
 	<body>
 		<Marquee></Marquee>
-		<Header 
-		logocolor=white
-		/>
 		<main><slot/></main>
 		<Footer/>
 	</body>

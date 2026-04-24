@@ -3,14 +3,14 @@
 import Layout from "../layouts/Layout.astro";
 import About_card_1 from "../components/About_card_1.astro";
 import About_card_2 from "../components/About_card_2.astro";
+import Header from "../components/Header.astro";
+import Hero_about from "../components/Hero_about.astro";
 ---
+
    <Layout>
-
-<h1>Hvem er 
-A Good Case
-</h1>
-
+    <Hero_about/>
   <section>
+   <Header logocolor="black" />
     <About_card_1 
       overskrift="Vores historie"
       
@@ -54,3 +54,10 @@ A Good Case
   </section>
 
 </Layout>
+
+<style>
+    .nav_menu {
+     display: none;
+     color: black;
+     }
+</style>
