@@ -41,8 +41,7 @@ const data = await fetch(endpoint, options).then((response) => response.json());
 
       @media (min-width: 768px) {
         section {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 60px;
+            display: grid;
         }
     }
 

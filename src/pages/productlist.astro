@@ -3,6 +3,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
+import HeroDetails from "../components/Hero_details.astro";
 
 
 const endpoint = "https://iaduahadfyssoyyvutnz.supabase.co/rest/v1/Produkter?"
@@ -19,6 +20,8 @@ const data = await fetch(endpoint, options).then((response) => response.json());
 
 <Layout>
    <Header logocolor="black" />
+   <HeroDetails/>
+   <h1>Alle øl</h1>
     <section>
         {data.map((product) => <Card {product} />)}
     </section>
@@ -29,6 +32,15 @@ const data = await fetch(endpoint, options).then((response) => response.json());
         display: grid;
         gap: 20px;
         padding: var(--padding-mobile);
+    }
+
+        h1 {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 50px;
+        margin-left: 30px;
+        font-family: var(--poppins);
+        font-size: var(--h1-mobile);
     }
 
       .nav_menu {
@@ -48,7 +60,17 @@ const data = await fetch(endpoint, options).then((response) => response.json());
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 60px;
-        padding: var(--padding-desk);
+        padding-left: var(--padding-desk);
+        padding-right: var(--padding-desk);
+    }
+
+    h1 {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 50px;
+        margin-left: 100px;
+        font-family: var(--poppins);
+        font-size: var(--h1-desk);
     }
     }
 </style>

@@ -3,16 +3,13 @@ import "../css/custom.css";
 ---
 
 <section class="hero">
-  <h1>Hvem er<br>A Good Case?</h1>
 </section>
 
 <style>
 .hero {
-  background: url('/src/assets/img/') lightgray 50% / cover no-repeat;
+  background: url(/src/assets/img/hero_detail.webp);
   background-position: center;
   background-size: cover;
-  margin-bottom: 50px;
-  padding-bottom: 50px;
   padding-top: 100px;
   padding-left: var(--padding-mobile);
 }
@@ -28,12 +25,10 @@ h1{
     @media (min-width: 1024px){
       .hero{
         max-height: 750px;
-        margin-top: 150px;
          padding-top: 300px;
         padding-bottom: 250px;
         padding-left: 100px;
-          margin-bottom: 0px;
-        background-image: url('/src/assets/img/hero_team.webp');
+        background-image: url(/src/assets/img/hero_detail.webp);
       }
 
       h1{
