@@ -2,6 +2,7 @@
 //@ts-nocheck
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
+import Accordiondescription from '../components/Accordion-description.astro';
 import Productdetails from '../../components/Productdetails.astro';
 
 export async function getStaticPaths() {
@@ -29,6 +30,8 @@ const { product } = Astro.props;
 
 
 <Layout>
+  <Card product={product}/>
+  <Accordiondescription/>
 
   <Productdetails product={product}/>
 
