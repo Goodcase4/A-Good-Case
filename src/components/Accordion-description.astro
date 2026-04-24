@@ -1,0 +1,99 @@
+---
+import "../css/general.css"
+import "../css/custom.css"
+---
+
+<section class="acc-desc">
+
+<div class="accs">
+    <details class="acc-styling">
+        <summary>NEDSÆTTELSESÅRSAG</summary>
+        <p>Denne øl er nedsat på grund af en fejl i produktionen af emballagen: Der mangler et nummer på etiketten.</p>
+    </details>
+    <details class="acc-styling">
+        <summary>ØLTYPE</summary>
+        <p>Her får brugeren en beskrivelse af øltypen.</p>
+    </details>
+    <details class="acc-styling">
+        <summary>BÆREDYGTIGHED</summary>
+        <p>Her får brugeren viden om hvor meget vand og energi der bruges i produktionen - og hvordan det påvirker miljøet.</p>
+    </details>
+    <details class="acc-styling">
+        <summary>BRYGGERI</summary>
+        <p>Her får brugeren en beskrivelse af bryggeriet og dets historie samt hvad de specialiserer sig indenfor.</p>
+    </details>
+</div>
+
+<article><p>Spirit Level er en Pale Ale med præcision og balance i centrum. Brygget med Nelson Sauvin, Cashmere, Citra BBC og Amarillo BBC, hvilket giver en ren og frugtig profil med både vinøs friskhed, tropiske noter og et strejf af citruszest. Kroppen er let og elegant, hvilket gør den utrolig tilgængelig uden at mangle dybde. En øl, der viser Alefarms evne til at forfine selv de klassiske stilarter.</p>
+</article>
+
+</section>
+
+
+<style>
+
+section{
+    margin: 30px;
+}
+   
+
+    article{
+         border: 7px solid var(--secondary-accent-color);
+         padding: 30px;
+         font-family: var(--poppins);
+            color: var(--primary-text-color);
+            font-size: 1rem;
+
+            p{
+                max-width: 65ch;
+            }
+
+    }
+
+
+
+
+
+    .accs{
+        display: flex;
+        flex-direction: column;
+        max-width: 1024px;
+       
+        
+        
+    }
+
+
+.acc-styling{
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    font-family: var(--poppins);
+    font-size: 14px;
+    font-weight: var(--semibold);
+    padding: 20px;
+    border: 7px solid var(--secondary-accent-color);
+    
+    
+}
+
+
+@media (min-width: 1024px){
+ section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 100px;
+    }
+
+.accs{
+        
+        max-width: 900px;
+       
+        
+        
+    }
+
+   
+
+    }
+
+</style>

@@ -2,6 +2,7 @@
 //@ts-nocheck
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
+import AccordionDescription from '../../components/Accordion-description.astro';
 import Productdetails from '../../components/Productdetails.astro';
 import Header from '../../components/Header.astro';
 
@@ -34,6 +35,7 @@ const { product } = Astro.props;
 		logocolor=black
 		/>
   <Productdetails product={product}/>
+   <AccordionDescription />
 
 </Layout>
 
